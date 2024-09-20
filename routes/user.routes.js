@@ -10,7 +10,7 @@ router.get("/profile", authMiddleware.isAuthenticated, userController.getProfile
 
 router.get('/products', authMiddleware.isAuthenticated, userController.getProducts);
 router.get('/product/:id', authMiddleware.isAuthenticated, userController.getProductById);
-router.get('/order/:id', authMiddleware.isAuthenticated, userController.getOrderById);
+router.get('/order/:id', authMiddleware.isAuthenticated, userController.createOrder);
 router.get('/verify/:id', authMiddleware.isAuthenticated, userController.verifyPayment);
 
 module.exports = router;
